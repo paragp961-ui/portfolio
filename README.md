@@ -35,3 +35,8 @@ Create an `images` folder in your repository and upload your files there. In `in
 `<img src="images/my-campaign.gif" alt="Animated campaign concept">`
 
 For a cleaner design, use appropriately sized, compressed images. GIFs can be large; short MP4/WebM clips are often smaller and smoother, but browser autoplay rules apply. Keep the case-study description accessible as text as well.
+
+
+## Included poster assets
+
+The `images/` folder contains the Retreat Dermatology, Om Sai Patient Care Service, and Samarth Dental Clinic poster concepts. The updated `index.html` references these files directly. Upload the contents of this ZIP to the root of your existing GitHub Pages repository, keeping the `images/` folder structure intact.
