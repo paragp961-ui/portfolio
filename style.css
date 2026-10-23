@@ -546,6 +546,75 @@ h3 {
     transition: none;
   }
 
+  
+/* Project category and format */
+.work-card .card-top p {
+  color: #B94E35;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 0.6px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/* Brief highlight */
+.work-card .spec {
+  display: block;
+  margin-top: 14px;
+  padding: 15px 17px;
+  background: #F3E8DF;
+  border-left: 4px solid #B94E35;
+  border-radius: 0 8px 8px 0;
+  color: #292624;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+/* Make the word "Brief" stand out */
+.work-card .spec {
+  position: relative;
+}
+
+/* Project title */
+.work-card .card-top h3 {
+  color: #242424;
+}
+
+/* Project number */
+.work-card .work-no {
+  color: #B94E35;
+}
+
+/* Poster hover effect */
+.work-card .work-image {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.work-card .work-image img {
+  transition: transform 0.3s ease;
+}
+
+.work-card .work-image:hover img {
+  transform: scale(1.025);
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .work-card .spec {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .work-card .card-top p {
+    font-size: 11px;
+  }
+}
+
+
   .hero-image:hover {
     transform: none;
   }
