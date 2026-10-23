@@ -414,7 +414,7 @@ h3 {
   line-height: 1.7;
 }
 
-/* Poetry section */
+/* Base poetry section styles */
 .poem-empty {
   margin-top: 45px;
   padding: clamp(28px, 6vw, 70px);
@@ -621,27 +621,20 @@ h3 {
 
 /* ========================================
    POET ON EDGE — PARTY GHOST
+   These rules only affect poet-on-edge.html
    ======================================== */
 
-/* Keep the poem card layout */
-.poem-empty {
-  display: block;
-}
-
-/* Poem content wrapper */
-.poem-content {
+.poet-page .poem-content {
   max-width: 850px;
 }
 
-/* Small poem number label */
-.poem-content .eyebrow {
+.poet-page .poem-content .eyebrow {
   margin-bottom: 12px;
   font-size: 11px;
   letter-spacing: 0.12em;
 }
 
-/* Highlighted poem title */
-.poem-title {
+.poet-page .poem-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(42px, 7vw, 76px);
   font-weight: 600;
@@ -651,8 +644,7 @@ h3 {
   margin: 12px 0 32px;
 }
 
-/* Poem body */
-.poem-content .big {
+.poet-page .poem-content .big {
   font-family: 'Playfair Display', serif;
   font-size: clamp(18px, 2.2vw, 23px);
   font-weight: 500;
@@ -662,42 +654,41 @@ h3 {
   max-width: 850px;
 }
 
-/* Afterword separated from the poem */
-.poem-afterword {
+.poet-page .poem-afterword {
   border-top: 1px solid var(--line);
   margin-top: 48px;
   padding-top: 24px;
 }
 
-.poem-afterword .label {
+.poet-page .poem-afterword .label {
   display: block;
   margin-bottom: 12px;
 }
 
-.poem-afterword p {
+.poet-page .poem-afterword p {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.7;
   margin: 0;
 }
 
-/* Mobile adjustments */
+/* Poetry page mobile adjustments */
 @media (max-width: 720px) {
-  .poem-empty {
+  .poet-page .poem-empty {
     padding: 24px 20px;
   }
 
-  .poem-title {
+  .poet-page .poem-title {
     font-size: clamp(40px, 11vw, 58px);
     margin-bottom: 26px;
   }
 
-  .poem-content .big {
+  .poet-page .poem-content .big {
     font-size: 18px;
     line-height: 1.85;
   }
 
-  .poem-afterword {
+  .poet-page .poem-afterword {
     margin-top: 36px;
   }
 }
