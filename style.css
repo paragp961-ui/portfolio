@@ -89,3 +89,37 @@ h3{font-size:22px;letter-spacing:-.04em;margin-bottom:8px}
   .footer{flex-direction:column}
   .hero-copy h1{font-size:clamp(52px,15vw,88px)}
 }
+
+
+/* FIX: display the complete Me photo */
+.hero-image {
+  aspect-ratio: auto !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.hero-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: unset !important;
+  object-position: center !important;
+}
+
+/* Keep the photo uncropped on mobile too */
+@media (max-width: 720px) {
+  .hero-image {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .hero-image img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: unset !important;
+  }
+}
+
