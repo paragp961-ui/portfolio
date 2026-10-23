@@ -45,3 +45,7 @@ The `images/` folder contains the Retreat Dermatology, Om Sai Patient Care Servi
 ## Suvida Real Estate concept
 
 Added `images/suvida-real-estate-campaign.png` and a portfolio card/case-study note for the speculative campaign headline “Your perception is our priority.” The contact number, address, and logo treatment visible in the generated artwork are illustrative; verify them with the business before presenting the poster as approved or using it commercially.
+
+
+### Added campaign concept
+- **Maternity Hospital Campaign (09):** “Brand New Crying Soul Behind the Doors.” Image: `images/delivery-hospital-campaign.png`. This is a speculative concept for a maternity hospital in Mulund; no specific hospital is represented as a confirmed client.
