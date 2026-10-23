@@ -147,7 +147,7 @@ h3 {
 /* Hero section */
 .hero-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 36px;
   align-items: center;
 }
@@ -200,44 +200,40 @@ h3 {
   }
 }
 
-/* Image frame: original proportions + elegant border */
+/* Image frame: no stretching or empty space below */
 .hero-image {
   display: block;
   width: 100%;
   min-width: 0;
   height: auto;
+  min-height: 0;
   max-height: none;
-  aspect-ratio: auto;
   align-self: center;
-  padding: 8px;
-  overflow: hidden;
+  padding: 7px;
   background: #fffdf8;
   border: 1px solid #c9c0b1;
-  border-radius: 18px;
+  border-radius: 16px;
+  overflow: hidden;
   box-shadow:
     0 10px 28px rgba(32, 33, 31, 0.09),
     0 2px 6px rgba(32, 33, 31, 0.04);
-  transition:
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .hero-image img {
   display: block;
   width: 100%;
-  height: auto;
+  height: auto !important;
   max-height: none;
   object-fit: contain;
   object-position: center;
-  border-radius: 11px;
+  border-radius: 9px;
   filter: saturate(0.8);
 }
 
 .hero-image:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 14px 34px rgba(32, 33, 31, 0.13),
-    0 3px 8px rgba(32, 33, 31, 0.05);
+  box-shadow: 0 14px 34px rgba(32, 33, 31, 0.13);
 }
 
 /* CTA */
@@ -457,7 +453,7 @@ h3 {
   display: none;
 }
 
-/* Responsive layout */
+/* Mobile layout */
 @media (max-width: 720px) {
   .wrap {
     width: calc(100% - 32px);
@@ -490,7 +486,7 @@ h3 {
   .hero-row,
   .about-grid,
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .hero-row {
@@ -500,19 +496,19 @@ h3 {
   .hero-image {
     width: 100%;
     height: auto;
+    min-height: 0;
     max-height: none;
-    aspect-ratio: auto;
-    padding: 6px;
-    border-radius: 15px;
+    padding: 5px;
+    border-radius: 14px;
     order: -1;
   }
 
   .hero-image img {
     width: 100%;
-    height: auto;
+    height: auto !important;
     max-height: none;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 9px;
   }
 
   .hero-copy h1 {
@@ -544,11 +540,9 @@ h3 {
     scroll-behavior: auto;
   }
 
-  .moving-arrow {
-    animation: none;
-  }
-
+  .moving-arrow,
   .hero-image {
+    animation: none;
     transition: none;
   }
 
