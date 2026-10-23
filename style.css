@@ -161,4 +161,22 @@ nav {
     gap: 18px;
   }
 }
+.topbar {
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
 
+.brand {
+  font-size: clamp(36px, 6vw, 64px) !important;
+  text-align: center !important;
+}
+
+.brand span {
+  display: none !important;
+}
+
+nav {
+  justify-content: center !important;
+  flex-wrap: wrap;
+}
