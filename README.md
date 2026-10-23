@@ -40,3 +40,8 @@ For a cleaner design, use appropriately sized, compressed images. GIFs can be la
 ## Included poster assets
 
 The `images/` folder contains the Retreat Dermatology, Om Sai Patient Care Service, and Samarth Dental Clinic poster concepts. The updated `index.html` references these files directly. Upload the contents of this ZIP to the root of your existing GitHub Pages repository, keeping the `images/` folder structure intact.
+
+
+## Suvida Real Estate concept
+
+Added `images/suvida-real-estate-campaign.png` and a portfolio card/case-study note for the speculative campaign headline “Your perception is our priority.” The contact number, address, and logo treatment visible in the generated artwork are illustrative; verify them with the business before presenting the poster as approved or using it commercially.
