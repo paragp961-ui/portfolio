@@ -217,3 +217,33 @@ header.topbar > nav {
   gap: 24px !important;
 }
 
+/* Copywriter inspiration headline */
+.inspiration-heading {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.moving-arrow {
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1.2;
+  animation: arrow-move 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes arrow-move {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(8px, -5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moving-arrow {
+    animation: none;
+  }
+}
+
