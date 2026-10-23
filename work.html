@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,6 +8,7 @@
   <meta name="description" content="Selected copywriting, campaign and creative concepts by Parag Patil.">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="instagram-carousel.css">
 
   <style>
     /* Project category */
@@ -120,6 +120,10 @@
 
     <main class="page">
 
+      <!-- =========================================================
+           SECTION 1 — CAMPAIGNS AND COPY
+           Existing work. Nothing changed here.
+           ========================================================= -->
       <div class="section-head">
         <div>
           <p class="eyebrow">Campaigns and Copy</p>
@@ -259,6 +263,92 @@
         I’ve worked with a bunch of small vendors, making copies for their menu cards and brochures in exchange for free chai and cake.
       </p>
 
+      <!-- =========================================================
+           SECTION 2 — INSTAGRAM CAROUSEL
+           Separate category. This does NOT become item 06.
+           ========================================================= -->
+      <section class="instagram-section" aria-labelledby="instagram-carousel-heading">
+
+        <div class="section-head instagram-section-head">
+          <div>
+            <p class="eyebrow">Instagram Carousel</p>
+            <h2 id="instagram-carousel-heading">Bluestone</h2>
+          </div>
+
+          <p>Social media carousel concept — a seven-slide visual story created for Instagram.</p>
+        </div>
+
+        <article class="instagram-project">
+          <div class="instagram-project-copy">
+            <div>
+              <span class="instagram-project-no">01</span>
+              <h3>Bluestone — Instagram Carousel</h3>
+              <p class="instagram-project-meta">Social Media · Instagram Carousel · Visual Storytelling</p>
+            </div>
+
+            <div class="instagram-brief">
+              <span class="brief-label">Project</span>
+              <p>A seven-slide Instagram carousel built around a simple visual conversation and illustrated storytelling.</p>
+            </div>
+          </div>
+
+          <div class="instagram-viewer" data-carousel>
+            <div class="instagram-stage">
+              <button class="instagram-arrow instagram-prev" type="button" aria-label="Previous slide">←</button>
+
+              <div class="instagram-slide-wrap">
+                <img
+                  class="instagram-slide"
+                  src="images/bluestone-slide-1.png"
+                  alt="Bluestone Instagram carousel slide 1 of 7"
+                  data-carousel-image>
+              </div>
+
+              <button class="instagram-arrow instagram-next" type="button" aria-label="Next slide">→</button>
+            </div>
+
+            <div class="instagram-controls">
+              <span class="instagram-counter" data-carousel-counter>01 / 07</span>
+
+              <div class="instagram-dots" aria-label="Carousel slide navigation">
+                <button type="button" class="instagram-dot is-active" aria-label="Go to slide 1"></button>
+                <button type="button" class="instagram-dot" aria-label="Go to slide 2"></button>
+                <button type="button" class="instagram-dot" aria-label="Go to slide 3"></button>
+                <button type="button" class="instagram-dot" aria-label="Go to slide 4"></button>
+                <button type="button" class="instagram-dot" aria-label="Go to slide 5"></button>
+                <button type="button" class="instagram-dot" aria-label="Go to slide 6"></button>
+                <button type="button" class="instagram-dot" aria-label="Go to slide 7"></button>
+              </div>
+            </div>
+
+            <div class="instagram-thumbs" aria-label="Carousel thumbnails">
+              <button type="button" class="instagram-thumb is-active" aria-label="View slide 1">
+                <img src="images/bluestone-slide-1.png" alt="">
+              </button>
+              <button type="button" class="instagram-thumb" aria-label="View slide 2">
+                <img src="images/bluestone-slide-2.png" alt="">
+              </button>
+              <button type="button" class="instagram-thumb" aria-label="View slide 3">
+                <img src="images/bluestone-slide-3.png" alt="">
+              </button>
+              <button type="button" class="instagram-thumb" aria-label="View slide 4">
+                <img src="images/bluestone-slide-4.png" alt="">
+              </button>
+              <button type="button" class="instagram-thumb" aria-label="View slide 5">
+                <img src="images/bluestone-slide-5.png" alt="">
+              </button>
+              <button type="button" class="instagram-thumb" aria-label="View slide 6">
+                <img src="images/bluestone-slide-6.png" alt="">
+              </button>
+              <button type="button" class="instagram-thumb" aria-label="View slide 7">
+                <img src="images/bluestone-slide-7.png" alt="">
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
     </main>
 
     <footer class="footer">
@@ -267,5 +357,62 @@
     </footer>
 
   </div>
+
+  <script>
+    (() => {
+      const carousel = document.querySelector('[data-carousel]');
+      if (!carousel) return;
+
+      const image = carousel.querySelector('[data-carousel-image]');
+      const counter = carousel.querySelector('[data-carousel-counter]');
+      const prev = carousel.querySelector('.instagram-prev');
+      const next = carousel.querySelector('.instagram-next');
+      const dots = [...carousel.querySelectorAll('.instagram-dot')];
+      const thumbs = [...carousel.querySelectorAll('.instagram-thumb')];
+
+      const slides = [
+        'images/bluestone-slide-1.png',
+        'images/bluestone-slide-2.png',
+        'images/bluestone-slide-3.png',
+        'images/bluestone-slide-4.png',
+        'images/bluestone-slide-5.png',
+        'images/bluestone-slide-6.png',
+        'images/bluestone-slide-7.png'
+      ];
+
+      let current = 0;
+
+      function showSlide(index) {
+        current = (index + slides.length) % slides.length;
+        image.src = slides[current];
+        image.alt = `Bluestone Instagram carousel slide ${current + 1} of ${slides.length}`;
+        counter.textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('is-active', i === current);
+        });
+
+        thumbs.forEach((thumb, i) => {
+          thumb.classList.toggle('is-active', i === current);
+        });
+      }
+
+      prev.addEventListener('click', () => showSlide(current - 1));
+      next.addEventListener('click', () => showSlide(current + 1));
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => showSlide(i));
+      });
+
+      thumbs.forEach((thumb, i) => {
+        thumb.addEventListener('click', () => showSlide(i));
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') showSlide(current - 1);
+        if (event.key === 'ArrowRight') showSlide(current + 1);
+      });
+    })();
+  </script>
 </body>
 </html>
