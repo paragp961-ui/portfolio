@@ -618,3 +618,86 @@ h3 {
     transform: none;
   }
 }
+
+/* ========================================
+   POET ON EDGE — PARTY GHOST
+   ======================================== */
+
+/* Keep the poem card layout */
+.poem-empty {
+  display: block;
+}
+
+/* Poem content wrapper */
+.poem-content {
+  max-width: 850px;
+}
+
+/* Small poem number label */
+.poem-content .eyebrow {
+  margin-bottom: 12px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+/* Highlighted poem title */
+.poem-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 7vw, 76px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+  margin: 12px 0 32px;
+}
+
+/* Poem body */
+.poem-content .big {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 2.2vw, 23px);
+  font-weight: 500;
+  line-height: 1.9;
+  letter-spacing: 0;
+  white-space: pre-line;
+  max-width: 850px;
+}
+
+/* Afterword separated from the poem */
+.poem-afterword {
+  border-top: 1px solid var(--line);
+  margin-top: 48px;
+  padding-top: 24px;
+}
+
+.poem-afterword .label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.poem-afterword p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 720px) {
+  .poem-empty {
+    padding: 24px 20px;
+  }
+
+  .poem-title {
+    font-size: clamp(40px, 11vw, 58px);
+    margin-bottom: 26px;
+  }
+
+  .poem-content .big {
+    font-size: 18px;
+    line-height: 1.85;
+  }
+
+  .poem-afterword {
+    margin-top: 36px;
+  }
+}
