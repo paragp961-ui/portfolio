@@ -8,6 +8,12 @@
   --line: #d8d3c8;
   --accent: #d6ff58;
   --card: #ebe7dd;
+
+  /* Work page colours */
+  --work-accent: #b94e35;
+  --brief-bg: #f3e8df;
+  --brief-text: #292624;
+
   --max: 1180px;
 }
 
@@ -75,7 +81,7 @@ nav {
 nav a {
   font-size: 13px;
   color: var(--muted);
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 nav a:hover,
@@ -200,7 +206,7 @@ h3 {
   }
 }
 
-/* Image frame: no stretching or empty space below */
+/* Hero image */
 .hero-image {
   display: block;
   width: 100%;
@@ -223,7 +229,7 @@ h3 {
 .hero-image img {
   display: block;
   width: 100%;
-  height: auto !important;
+  height: auto;
   max-height: none;
   object-fit: contain;
   object-position: center;
@@ -253,7 +259,7 @@ h3 {
   background: #41423b;
 }
 
-/* Work section */
+/* Work section heading */
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -272,6 +278,7 @@ h3 {
   font-size: 14px;
 }
 
+/* Work cards */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -288,6 +295,7 @@ h3 {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   margin-bottom: 16px;
+  border-radius: 10px;
 }
 
 .work-image img {
@@ -295,7 +303,7 @@ h3 {
   height: 100%;
   object-fit: contain;
   display: block;
-  transition: transform 0.35s;
+  transition: transform 0.3s ease;
 }
 
 .work-card:hover .work-image img {
@@ -309,34 +317,74 @@ h3 {
   align-items: flex-start;
 }
 
-.work-card p {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.5;
-  margin: 0;
+.card-top > div {
+  min-width: 0;
+  flex: 1;
 }
 
-.work-card h3 {
+/* Project title */
+.work-card .card-top h3 {
+  color: #242424;
   font-size: 23px;
+  line-height: 1.25;
+  margin-bottom: 8px;
 }
 
+/* Project category and format */
+.work-card .card-top p {
+  color: var(--work-accent);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  margin: 8px 0 0;
+}
+
+/* Project number */
 .work-no {
+  flex-shrink: 0;
   font-family: 'DM Mono', monospace;
-  color: var(--muted);
+  color: var(--work-accent);
   font-size: 11px;
   padding-top: 6px;
 }
 
-.spec {
-  display: inline-block;
+/* Project brief */
+.work-card .spec {
+  display: block;
+  margin-top: 14px;
+  padding: 15px 17px;
+  background: var(--brief-bg);
+  border: 1px solid #ead7ca;
+  border-left: 4px solid var(--work-accent);
+  border-radius: 0 8px 8px 0;
+  color: var(--brief-text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Brief label, if your HTML includes it */
+.work-card .brief-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--work-accent);
   font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  color: #68675f;
-  border: 1px solid var(--line);
-  padding: 5px 7px;
-  margin-top: 10px;
+}
+
+/* Brief paragraph */
+.work-card .spec p {
+  margin: 0;
+  color: var(--brief-text);
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 /* About section */
@@ -505,7 +553,7 @@ h3 {
 
   .hero-image img {
     width: 100%;
-    height: auto !important;
+    height: auto;
     max-height: none;
     object-fit: contain;
     border-radius: 9px;
@@ -529,6 +577,19 @@ h3 {
     flex-direction: column;
   }
 
+  .work-card .spec {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .work-card .spec p {
+    font-size: 14px;
+  }
+
+  .work-card .card-top p {
+    font-size: 11px;
+  }
+
   .footer {
     flex-direction: column;
   }
@@ -540,82 +601,20 @@ h3 {
     scroll-behavior: auto;
   }
 
-  .moving-arrow,
-  .hero-image {
+  .moving-arrow {
     animation: none;
+  }
+
+  .hero-image,
+  .work-image img {
     transition: none;
   }
 
-  
-/* Project category and format */
-.work-card .card-top p {
-  color: #B94E35;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.7;
-  letter-spacing: 0.6px;
-  margin-top: 8px;
-  margin-bottom: 16px;
-}
-
-/* Brief highlight */
-.work-card .spec {
-  display: block;
-  margin-top: 14px;
-  padding: 15px 17px;
-  background: #F3E8DF;
-  border-left: 4px solid #B94E35;
-  border-radius: 0 8px 8px 0;
-  color: #292624;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.75;
-}
-
-/* Make the word "Brief" stand out */
-.work-card .spec {
-  position: relative;
-}
-
-/* Project title */
-.work-card .card-top h3 {
-  color: #242424;
-}
-
-/* Project number */
-.work-card .work-no {
-  color: #B94E35;
-}
-
-/* Poster hover effect */
-.work-card .work-image {
-  display: block;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.work-card .work-image img {
-  transition: transform 0.3s ease;
-}
-
-.work-card .work-image:hover img {
-  transform: scale(1.025);
-}
-
-/* Mobile spacing */
-@media (max-width: 600px) {
-  .work-card .spec {
-    padding: 12px 14px;
-    font-size: 14px;
-  }
-
-  .work-card .card-top p {
-    font-size: 11px;
-  }
-}
-
-
   .hero-image:hover {
+    transform: none;
+  }
+
+  .work-card:hover .work-image img {
     transform: none;
   }
 }
