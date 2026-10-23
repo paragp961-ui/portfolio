@@ -39,6 +39,10 @@ h1 em,h2 em,.copy-words em,.sound-title em{font-family:'Playfair Display',Georgi
 .project-wide{grid-column:1/-1}
 .project-visual{display:block;position:relative;overflow:hidden;min-height:340px;transition:transform .25s}
 .project-visual:hover{transform:translateY(-3px)}
+.poster-visual{background:#f4f0e9;display:flex;align-items:center;justify-content:center;padding:28px;min-height:520px}
+.poster-visual img{display:block;width:auto;max-width:100%;height:auto;max-height:650px;object-fit:contain;box-shadow:0 12px 35px rgba(0,0,0,.16)}
+.poster-visual .visual-label{z-index:1}
+.poster-visual .visual-arrow{z-index:1}
 .project-large .project-visual{min-height:470px}
 .visual-label{position:absolute;left:22px;top:20px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;z-index:3}
 .visual-arrow{position:absolute;right:20px;bottom:18px;font-size:24px;z-index:3;transition:transform .2s}
