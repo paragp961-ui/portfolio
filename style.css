@@ -1,18 +1,17 @@
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 :root {
-  --paper: #f5f2eb;
-  --ink: #20211f;
-  --muted: #77766f;
-  --line: #d8d3c8;
-  --accent: #d6ff58;
-  --card: #ebe7dd;
+  --paper: #000000;
+  --ink: #ffffff;
+  --muted: #a8a8a8;
+  --line: #2f2f2f;
+  --accent: #ffffff;
+  --card: #111111;
 
   /* Work page colours */
-  --work-accent: #b94e35;
-  --brief-bg: #f3e8df;
-  --brief-text: #292624;
+  --work-accent: #ffffff;
+  --brief-bg: #111111;
+  --brief-text: #ffffff;
 
   --max: 1180px;
 }
@@ -27,8 +26,8 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background: #000000;
+  color: #ffffff;
   font-family: 'DM Sans', sans-serif;
 }
 
@@ -42,7 +41,10 @@ a {
   margin: auto;
 }
 
-/* Header */
+/* ========================================
+   HEADER
+   ======================================== */
+
 .topbar {
   width: 100%;
   display: flex;
@@ -53,6 +55,7 @@ a {
   padding: 36px 0 24px;
   border-bottom: 1px solid var(--line);
   text-align: center;
+  background: #000000;
 }
 
 .brand {
@@ -63,6 +66,7 @@ a {
   line-height: 1.05;
   font-weight: 700;
   letter-spacing: -0.065em;
+  color: #ffffff;
 }
 
 .brand span {
@@ -80,27 +84,31 @@ nav {
 
 nav a {
   font-size: 13px;
-  color: var(--muted);
+  color: #b8b8b8;
   transition: color 0.2s ease;
 }
 
 nav a:hover,
 nav a.active {
-  color: var(--ink);
+  color: #ffffff;
 }
 
 nav a.active::after {
   content: '';
   display: block;
-  background: var(--ink);
+  background: #ffffff;
   height: 2px;
   margin-top: 5px;
 }
 
-/* General layout */
+/* ========================================
+   GENERAL LAYOUT
+   ======================================== */
+
 .page {
   padding: 76px 0 100px;
   min-height: 70vh;
+  background: #000000;
 }
 
 .eyebrow,
@@ -111,7 +119,7 @@ nav a.active::after {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 11px;
-  color: var(--muted);
+  color: #a8a8a8;
 }
 
 h1,
@@ -128,6 +136,7 @@ h1 {
   font-weight: 600;
   margin: 24px 0 28px;
   max-width: 950px;
+  color: #ffffff;
 }
 
 h2 {
@@ -135,22 +144,27 @@ h2 {
   letter-spacing: -0.06em;
   line-height: 1.02;
   margin-bottom: 18px;
+  color: #ffffff;
 }
 
 h3 {
   font-size: 22px;
   letter-spacing: -0.04em;
   margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .intro {
   font-size: clamp(17px, 2vw, 21px);
   line-height: 1.6;
   max-width: 660px;
-  color: #55564f;
+  color: #d0d0d0;
 }
 
-/* Hero section */
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
 .hero-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -165,7 +179,8 @@ h3 {
 
 .hero-copy .pill {
   display: inline-block;
-  background: var(--accent);
+  background: #ffffff;
+  color: #000000;
   padding: 9px 12px;
   border-radius: 99px;
   font-family: 'DM Mono', monospace;
@@ -174,7 +189,10 @@ h3 {
   letter-spacing: 0.06em;
 }
 
-/* Inspiration heading and animated arrow */
+/* ========================================
+   INSPIRATION HEADING
+   ======================================== */
+
 .inspiration-heading {
   position: relative;
   display: flex;
@@ -184,6 +202,7 @@ h3 {
   padding-right: 12px;
   font-size: clamp(34px, 4vw, 56px);
   line-height: 1.12;
+  color: #ffffff;
 }
 
 .moving-arrow {
@@ -206,7 +225,10 @@ h3 {
   }
 }
 
-/* Hero image */
+/* ========================================
+   HERO IMAGE
+   ======================================== */
+
 .hero-image {
   display: block;
   width: 100%;
@@ -216,13 +238,13 @@ h3 {
   max-height: none;
   align-self: center;
   padding: 7px;
-  background: #fffdf8;
-  border: 1px solid #c9c0b1;
+  background: #0a0a0a;
+  border: 1px solid #333333;
   border-radius: 16px;
   overflow: hidden;
   box-shadow:
-    0 10px 28px rgba(32, 33, 31, 0.09),
-    0 2px 6px rgba(32, 33, 31, 0.04);
+    0 10px 28px rgba(255, 255, 255, 0.08),
+    0 2px 6px rgba(255, 255, 255, 0.03);
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
@@ -239,27 +261,35 @@ h3 {
 
 .hero-image:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(32, 33, 31, 0.13);
+  box-shadow: 0 14px 34px rgba(255, 255, 255, 0.12);
 }
 
-/* CTA */
+/* ========================================
+   CTA
+   ======================================== */
+
 .cta {
   display: inline-flex;
   align-items: center;
   gap: 14px;
   margin-top: 24px;
   padding: 14px 18px;
-  background: var(--ink);
-  color: white;
+  background: #ffffff;
+  color: #000000;
   border-radius: 3px;
   font-size: 13px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .cta:hover {
-  background: #41423b;
+  background: #d9d9d9;
+  color: #000000;
 }
 
-/* Work section heading */
+/* ========================================
+   WORK SECTION
+   ======================================== */
+
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -271,14 +301,17 @@ h3 {
 }
 
 .section-head p {
-  color: var(--muted);
+  color: #a8a8a8;
   margin: 0;
   max-width: 380px;
   line-height: 1.5;
   font-size: 14px;
 }
 
-/* Work cards */
+/* ========================================
+   WORK CARDS
+   ======================================== */
+
 .work-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -291,7 +324,7 @@ h3 {
 
 .work-image {
   display: block;
-  background: var(--card);
+  background: #111111;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   margin-bottom: 16px;
@@ -324,7 +357,7 @@ h3 {
 
 /* Project title */
 .work-card .card-top h3 {
-  color: #242424;
+  color: #ffffff;
   font-size: 23px;
   line-height: 1.25;
   margin-bottom: 8px;
@@ -332,7 +365,7 @@ h3 {
 
 /* Project category and format */
 .work-card .card-top p {
-  color: var(--work-accent);
+  color: #ffffff;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.7;
@@ -344,21 +377,24 @@ h3 {
 .work-no {
   flex-shrink: 0;
   font-family: 'DM Mono', monospace;
-  color: var(--work-accent);
+  color: #ffffff;
   font-size: 11px;
   padding-top: 6px;
 }
 
-/* Project brief */
+/* ========================================
+   PROJECT BRIEF
+   ======================================== */
+
 .work-card .spec {
   display: block;
   margin-top: 14px;
   padding: 15px 17px;
-  background: var(--brief-bg);
-  border: 1px solid #ead7ca;
-  border-left: 4px solid var(--work-accent);
+  background: #111111;
+  border: 1px solid #333333;
+  border-left: 4px solid #ffffff;
   border-radius: 0 8px 8px 0;
-  color: var(--brief-text);
+  color: #ffffff;
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -367,11 +403,11 @@ h3 {
   text-transform: none;
 }
 
-/* Brief label, if your HTML includes it */
+/* Brief label */
 .work-card .brief-label {
   display: block;
   margin-bottom: 5px;
-  color: var(--work-accent);
+  color: #ffffff;
   font-family: 'DM Mono', monospace;
   font-size: 10px;
   font-weight: 500;
@@ -382,12 +418,15 @@ h3 {
 /* Brief paragraph */
 .work-card .spec p {
   margin: 0;
-  color: var(--brief-text);
+  color: #ffffff;
   font-size: 14px;
   line-height: 1.7;
 }
 
-/* About section */
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
 .about-grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -402,24 +441,27 @@ h3 {
 .about-copy p {
   font-size: 18px;
   line-height: 1.8;
-  color: #55564f;
+  color: #d0d0d0;
 }
 
 .note {
   border-top: 1px solid var(--line);
   padding-top: 20px;
   margin-top: 36px;
-  color: var(--muted);
+  color: #a8a8a8;
   font-size: 13px;
   line-height: 1.7;
 }
 
-/* Base poetry section styles */
+/* ========================================
+   POETRY SECTION
+   ======================================== */
+
 .poem-empty {
   margin-top: 45px;
   padding: clamp(28px, 6vw, 70px);
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.28);
+  background: #0a0a0a;
   min-height: 260px;
   display: flex;
   flex-direction: column;
@@ -432,15 +474,19 @@ h3 {
   line-height: 1.12;
   max-width: 780px;
   letter-spacing: -0.04em;
+  color: #ffffff;
 }
 
 .poem-empty p {
-  color: var(--muted);
+  color: #a8a8a8;
   font-size: 13px;
   margin: 30px 0 0;
 }
 
-/* Contact section */
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -463,6 +509,7 @@ h3 {
   font-size: clamp(18px, 2.4vw, 28px);
   letter-spacing: -0.04em;
   overflow-wrap: anywhere;
+  color: #ffffff;
 }
 
 .contact-huge {
@@ -470,17 +517,22 @@ h3 {
   letter-spacing: -0.07em;
   line-height: 0.98;
   max-width: 750px;
+  color: #ffffff;
 }
 
-/* Footer */
+/* ========================================
+   FOOTER
+   ======================================== */
+
 .footer {
   border-top: 1px solid var(--line);
   padding: 22px 0 30px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  color: var(--muted);
+  color: #a8a8a8;
   font-size: 11px;
+  background: #000000;
 }
 
 .footer .mono {
@@ -491,7 +543,7 @@ h3 {
 
 .small-note {
   font-size: 12px;
-  color: var(--muted);
+  color: #a8a8a8;
   line-height: 1.6;
   max-width: 650px;
   margin-top: 26px;
@@ -501,8 +553,12 @@ h3 {
   display: none;
 }
 
-/* Mobile layout */
+/* ========================================
+   MOBILE LAYOUT
+   ======================================== */
+
 @media (max-width: 720px) {
+
   .wrap {
     width: calc(100% - 32px);
   }
@@ -595,8 +651,12 @@ h3 {
   }
 }
 
-/* Respect reduced-motion preferences */
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+
 @media (prefers-reduced-motion: reduce) {
+
   html {
     scroll-behavior: auto;
   }
@@ -621,7 +681,6 @@ h3 {
 
 /* ========================================
    POET ON EDGE — PARTY GHOST
-   These rules only affect poet-on-edge.html
    ======================================== */
 
 .poet-page .poem-content {
@@ -640,7 +699,7 @@ h3 {
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.045em;
-  color: var(--ink);
+  color: #ffffff;
   margin: 12px 0 32px;
 }
 
@@ -652,6 +711,7 @@ h3 {
   letter-spacing: 0;
   white-space: pre-line;
   max-width: 850px;
+  color: #ffffff;
 }
 
 .poet-page .poem-afterword {
@@ -666,14 +726,18 @@ h3 {
 }
 
 .poet-page .poem-afterword p {
-  color: var(--muted);
+  color: #a8a8a8;
   font-size: 13px;
   line-height: 1.7;
   margin: 0;
 }
 
-/* Poetry page mobile adjustments */
+/* ========================================
+   POETRY PAGE MOBILE
+   ======================================== */
+
 @media (max-width: 720px) {
+
   .poet-page .poem-empty {
     padding: 24px 20px;
   }
@@ -690,5 +754,139 @@ h3 {
 
   .poet-page .poem-afterword {
     margin-top: 36px;
+  }
+}
+
+/* ========================================
+   FINAL DARK THEME OVERRIDES
+   ======================================== */
+
+html,
+body {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+body {
+  color-scheme: dark;
+}
+
+.topbar,
+.page,
+.footer,
+section,
+header,
+main,
+article {
+  background-color: #000000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+strong,
+.brand {
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #d0d0d0;
+}
+
+nav a {
+  color: #b8b8b8;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffffff;
+}
+
+nav a.active::after {
+  background: #ffffff;
+}
+
+.eyebrow,
+.label,
+.meta,
+.project-no,
+.section-head p,
+.note,
+.small-note,
+.footer,
+.poem-empty p,
+.poet-page .poem-afterword p {
+  color: #a8a8a8;
+}
+
+.intro,
+.about-copy p {
+  color: #d0d0d0;
+}
+
+.topbar,
+.section-head,
+.contact-item,
+.footer,
+.poet-page .poem-afterword {
+  border-color: #2f2f2f;
+}
+
+.hero-image {
+  background: #0a0a0a;
+  border-color: #333333;
+}
+
+.work-image {
+  background: #111111;
+}
+
+.work-card .card-top h3,
+.work-card .card-top p,
+.work-no,
+.work-card .brief-label {
+  color: #ffffff;
+}
+
+.work-card .spec {
+  background: #111111;
+  border-color: #333333;
+  border-left-color: #ffffff;
+  color: #ffffff;
+}
+
+.work-card .spec p {
+  color: #ffffff;
+}
+
+.poem-empty {
+  background: #0a0a0a;
+  border-color: #2f2f2f;
+}
+
+.cta {
+  background: #ffffff;
+  color: #000000;
+}
+
+.cta:hover {
+  background: #d9d9d9;
+  color: #000000;
+}
+
+@media (max-width: 720px) {
+  html,
+  body {
+    background: #000000 !important;
   }
 }
