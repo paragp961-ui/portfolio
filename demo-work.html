@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DEMO WORK | Parag Patil</title>
+  <meta name="description" content="A self-directed digital analytics demo exploring acquisition, ecommerce funnel performance, and conversion optimisation for a fictional energy drink brand.">
+  <style>
+    :root {
+      --bg: #080808;
+      --panel: #111111;
+      --text: #f4f4f4;
+      --muted: #a9a9a9;
+      --line: #303030;
+      --accent: #b8f34b;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .site-header {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 27px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .back-link {
+      color: var(--muted);
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .back-link:hover { color: var(--accent); }
+    main {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+    .hero {
+      padding: clamp(56px, 9vw, 105px) 0 54px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 850px;
+      margin: 17px 0 18px;
+      font-size: clamp(36px, 7vw, 76px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      text-transform: uppercase;
+    }
+    .project-title {
+      margin: 22px 0 14px;
+      color: var(--accent);
+      font-size: clamp(20px, 3vw, 30px);
+      line-height: 1.15;
+      letter-spacing: -.025em;
+      text-transform: none;
+    }
+    .hero-copy {
+      max-width: 680px;
+      color: #c5c5c5;
+      font-size: clamp(16px, 2vw, 19px);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 28px;
+    }
+    .tag {
+      border: 1px solid #3c3c3c;
+      border-radius: 999px;
+      color: #d5d5d5;
+      padding: 6px 11px;
+      font-size: 11px;
+      letter-spacing: .04em;
+    }
+    .notice {
+      margin: 22px 0 0;
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: .1em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    section {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .section-number {
+      display: block;
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: .14em;
+      margin-bottom: 9px;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(25px, 4vw, 39px);
+      line-height: 1.1;
+      letter-spacing: -.035em;
+      text-transform: uppercase;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+    p { margin: 0 0 14px; }
+    .muted { color: var(--muted); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 26px;
+    }
+    .stat {
+      background: var(--panel);
+      border: 1px solid #252525;
+      padding: 18px 15px;
+      min-height: 115px;
+    }
+    .stat strong {
+      display: block;
+      color: var(--accent);
+      font-size: clamp(23px, 3vw, 34px);
+      letter-spacing: -.04em;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .stat span { color: #bcbcbc; font-size: 12px; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .info-card {
+      background: var(--panel);
+      border: 1px solid #252525;
+      padding: 23px;
+    }
+    .info-card p:last-child { margin-bottom: 0; }
+    .funnel {
+      display: grid;
+      gap: 11px;
+      margin-top: 24px;
+    }
+    .funnel-row {
+      display: grid;
+      grid-template-columns: minmax(130px, 210px) 1fr 65px;
+      align-items: center;
+      gap: 14px;
+    }
+    .funnel-label { font-size: 13px; color: #dedede; }
+    .bar-track {
+      height: 15px;
+      background: #242424;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    .bar {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .funnel-value {
+      text-align: right;
+      font-size: 13px;
+      font-variant-numeric: tabular-nums;
+    }
+    .recommendations {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .recommendation {
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid #252525;
+    }
+    .recommendation .index {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: .1em;
+      margin-bottom: 12px;
+    }
+    .recommendation p { color: #bdbdbd; font-size: 14px; }
+    .deliverables {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+    .deliverables span {
+      background: #161616;
+      border: 1px solid #333;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #dedede;
+    }
+    .footer {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 26px 0 40px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .footer a { text-decoration: none; }
+    .footer a:hover { color: var(--accent); }
+    @media (max-width: 760px) {
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stats .stat:last-child { grid-column: 1 / -1; }
+      .two-col, .recommendations { grid-template-columns: 1fr; }
+      .funnel-row { grid-template-columns: 115px 1fr 48px; gap: 8px; }
+      .funnel-label, .funnel-value { font-size: 11px; }
+      .site-header, .footer { width: calc(100% - 32px); }
+      main { width: calc(100% - 32px); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Parag Patil / Words &amp; Ideas</a>
+    <a class="back-link" href="work.html">← Back to Work</a>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="eyebrow">Analytics · Digital Performance</div>
+      <h1>DEMO WORK</h1>
+      <h2 class="project-title">Energy Drink — Digital Performance Analysis</h2>
+      <p class="hero-copy">A simulated ecommerce analytics project exploring how an energy drink brand could understand its traffic, identify friction in the purchase journey, and turn performance data into practical optimisation ideas.</p>
+      <div class="meta">
+        <span class="tag">GA4 Concepts</span>
+        <span class="tag">Looker Studio</span>
+        <span class="tag">Excel</span>
+        <span class="tag">Conversion Optimisation</span>
+      </div>
+      <p class="notice">Self-directed demo project — all figures are simulated</p>
+    </div>
+
+    <section>
+      <span class="section-number">01 / THE BUSINESS QUESTION</span>
+      <h2>Traffic is only the start.</h2>
+      <p class="muted">The fictional brand attracts visitors from search, paid media, social platforms, email, and direct traffic. But which visitors show purchase intent, and at what point does interest start to fade?</p>
+      <div class="two-col">
+        <div class="info-card">
+          <h3>The objective</h3>
+          <p class="muted">Build a clear view of acquisition and ecommerce behaviour, then identify areas worth testing across product discovery, campaign landing pages, and checkout.</p>
+        </div>
+        <div class="info-card">
+          <h3>The approach</h3>
+          <p class="muted">Organise the sample data into channel performance, a purchase funnel, and page-level observations that could be monitored in a Looker Studio dashboard.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="section-number">02 / THE CUSTOMER JOURNEY</span>
+      <h2>Where intent drops off</h2>
+      <p class="muted">Illustrative funnel based on 10,000 simulated sessions. The percentages show each step as a share of total sessions.</p>
+      <div class="stats">
+        <div class="stat"><strong>10,000</strong><span>Website sessions</span></div>
+        <div class="stat"><strong>7,000</strong><span>Product page views</span></div>
+        <div class="stat"><strong>2,200</strong><span>Add-to-cart events</span></div>
+        <div class="stat"><strong>1,100</strong><span>Checkout starts</span></div>
+        <div class="stat"><strong>660</strong><span>Completed purchases</span></div>
+      </div>
+      <div class="funnel" aria-label="Illustrative ecommerce funnel">
+        <div class="funnel-row"><span class="funnel-label">Sessions</span><div class="bar-track"><div class="bar" style="width:100%"></div></div><span class="funnel-value">100%</span></div>
+        <div class="funnel-row"><span class="funnel-label">Product views</span><div class="bar-track"><div class="bar" style="width:70%"></div></div><span class="funnel-value">70%</span></div>
+        <div class="funnel-row"><span class="funnel-label">Add to cart</span><div class="bar-track"><div class="bar" style="width:22%"></div></div><span class="funnel-value">22%</span></div>
+        <div class="funnel-row"><span class="funnel-label">Checkout starts</span><div class="bar-track"><div class="bar" style="width:11%"></div></div><span class="funnel-value">11%</span></div>
+        <div class="funnel-row"><span class="funnel-label">Purchases</span><div class="bar-track"><div class="bar" style="width:6.6%"></div></div><span class="funnel-value">6.6%</span></div>
+      </div>
+      <p class="muted" style="font-size:12px;margin-top:16px">Demo calculation: 660 purchases ÷ 10,000 sessions = 6.6% purchase conversion rate. This is illustrative data, not verified GA4 reporting.</p>
+    </section>
+
+    <section>
+      <span class="section-number">03 / WHAT TO INVESTIGATE</span>
+      <h2>From patterns to possibilities</h2>
+      <div class="two-col">
+        <div class="info-card">
+          <h3>Acquisition quality</h3>
+          <p class="muted">Compare channel sessions with purchase conversion rate and cost efficiency. High traffic alone may not indicate high-value traffic.</p>
+        </div>
+        <div class="info-card">
+          <h3>Purchase friction</h3>
+          <p class="muted">Review the transition from product view to cart and checkout. Product information, delivery costs, or payment steps may be worth testing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="section-number">04 / RECOMMENDED TESTS</span>
+      <h2>Ideas worth putting to work</h2>
+      <div class="recommendations">
+        <article class="recommendation">
+          <div class="index">TEST 01</div>
+          <h3>Make the product clearer</h3>
+          <p>Test more visible flavour descriptions, pack sizes, price-per-pack information, and product benefits on landing pages.</p>
+        </article>
+        <article class="recommendation">
+          <div class="index">TEST 02</div>
+          <h3>Reduce checkout friction</h3>
+          <p>Check whether delivery fees appear early enough, whether the form can be simplified, and whether payment options are clear.</p>
+        </article>
+        <article class="recommendation">
+          <div class="index">TEST 03</div>
+          <h3>Compare channel intent</h3>
+          <p>Use purchase conversion rate and simulated ROAS together before suggesting any change to media investment.</p>
+        </article>
+        <article class="recommendation">
+          <div class="index">TEST 04</div>
+          <h3>Match message to landing page</h3>
+          <p>Test campaign-specific pages against general product pages and compare product engagement and completed orders.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <span class="section-number">05 / TOOLS &amp; OUTPUT</span>
+      <h2>What this project demonstrates</h2>
+      <p class="muted">A structured approach to turning sample marketing data into an analytics story: define the question, map the funnel, compare channels, and propose measurable next steps.</p>
+      <div class="deliverables">
+        <span>Funnel analysis</span>
+        <span>Acquisition review</span>
+        <span>Dashboard concept</span>
+        <span>CRO recommendations</span>
+        <span>Performance measurement</span>
+      </div>
+      <p class="muted" style="font-size:12px;margin-top:22px">Tools: Excel / Google Sheets, GA4 measurement concepts, Looker Studio dashboard planning, and Canva for presentation. This page describes a self-directed demo; no real campaign changes or commercial results are claimed.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© Parag Patil</span>
+    <a href="work.html">Back to all projects ↑</a>
+  </footer>
+</body>
+</html>
