@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Work — Parag Patil</title>
-  <meta name="description" content="Selected copywriting, campaign and creative concepts by Parag Patil.">
+  <meta name="description" content="Selected copywriting, campaign, Instagram carousel and video editing work by Parag Patil.">
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="instagram-carousel.css">
@@ -83,7 +84,7 @@
       transform: scale(1.025);
     }
 
-    /* Mobile layout */
+    /* Mobile layout for campaign cards */
     @media (max-width: 600px) {
       .work-card .spec {
         padding: 13px 14px;
@@ -97,6 +98,166 @@
 
       .work-card .card-top p {
         font-size: 11px;
+      }
+    }
+
+    /* =====================================================
+       SECTION 3 — VIDEO EDITING
+       ===================================================== */
+
+    .video-editing-section {
+      margin-top: 60px;
+      margin-bottom: 70px;
+      color: #fff;
+    }
+
+    .video-editing-heading {
+      margin-bottom: 10px;
+      font-size: clamp(36px, 5vw, 54px);
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .video-editing-description {
+      max-width: 800px;
+      margin: 0 0 24px;
+      color: #bdbdbd;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* Clickable video thumbnail */
+    .video-thumbnail {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 870px;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid #383838;
+      border-radius: 10px;
+      background:
+        radial-gradient(
+          ellipse at 75% 25%,
+          rgba(139, 88, 68, 0.30),
+          transparent 45%
+        ),
+        linear-gradient(
+          135deg,
+          #292323 0%,
+          #151515 48%,
+          #080808 100%
+        );
+      color: #fff;
+      text-decoration: none;
+      isolation: isolate;
+    }
+
+    .video-thumbnail::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.55),
+          transparent 65%
+        );
+      z-index: -1;
+    }
+
+    .video-thumbnail-content {
+      position: absolute;
+      right: 7%;
+      bottom: 15%;
+      text-align: right;
+      pointer-events: none;
+    }
+
+    .video-thumbnail-label {
+      display: block;
+      margin-bottom: 4px;
+      color: #fff;
+      font-size: clamp(22px, 4vw, 46px);
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .video-thumbnail-subtitle {
+      display: block;
+      color: #f0b638;
+      font-size: clamp(24px, 5vw, 58px);
+      font-weight: 800;
+      font-style: italic;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .video-play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 76px;
+      padding-left: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      font-size: 29px;
+      transform: translate(-50%, -50%);
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .video-thumbnail:hover .video-play-button,
+    .video-thumbnail:focus-visible .video-play-button {
+      background: #fff;
+      color: #000;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .video-thumbnail:focus-visible {
+      outline: 2px solid #f0b638;
+      outline-offset: 4px;
+    }
+
+    .video-click-hint {
+      display: block;
+      max-width: 870px;
+      margin-top: 12px;
+      color: #999;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .video-editing-section {
+        margin-top: 42px;
+        margin-bottom: 45px;
+      }
+
+      .video-editing-description {
+        font-size: 15px;
+      }
+
+      .video-play-button {
+        width: 58px;
+        height: 58px;
+        font-size: 23px;
+      }
+
+      .video-thumbnail-content {
+        right: 5%;
+        bottom: 10%;
       }
     }
   </style>
@@ -120,10 +281,8 @@
 
     <main class="page">
 
-      <!-- =========================================================
-           SECTION 1 — CAMPAIGNS AND COPY
-           Existing work. Nothing changed here.
-           ========================================================= -->
+      <!-- SECTION 1 — CAMPAIGNS AND COPY -->
+
       <div class="section-head">
         <div>
           <p class="eyebrow">Campaigns and Copy</p>
@@ -263,10 +422,8 @@
         I’ve worked with a bunch of small vendors, making copies for their menu cards and brochures in exchange for free chai and cake.
       </p>
 
-      <!-- =========================================================
-           SECTION 2 — INSTAGRAM CAROUSEL
-           Separate category. This does NOT become item 06.
-           ========================================================= -->
+      <!-- SECTION 2 — INSTAGRAM CAROUSEL -->
+
       <section class="instagram-section" aria-labelledby="instagram-carousel-heading">
 
         <div class="section-head instagram-section-head">
@@ -349,7 +506,44 @@
 
       </section>
 
+      <!-- SECTION 3 — VIDEO EDITING -->
+
+      <section class="video-editing-section" id="video-editing" aria-labelledby="video-editing-heading">
+
+        <h2 class="video-editing-heading" id="video-editing-heading">
+          Video Editing
+        </h2>
+
+        <p class="video-editing-description">
+          Face blurring, object removal, animated text,
+          character intros, and cinematic effects.
+        </p>
+
+        <a
+          class="video-thumbnail"
+          href="https://drive.google.com/file/d/1JT3DET1Sy7kZ7Pfz3RGQLjVXh4s3WHg7/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch my video editing work on Google Drive">
+
+          <span class="video-play-button" aria-hidden="true">▶</span>
+
+          <span class="video-thumbnail-content" aria-hidden="true">
+            <span class="video-thumbnail-label">Video</span>
+            <span class="video-thumbnail-subtitle">Editing</span>
+          </span>
+
+        </a>
+
+        <span class="video-click-hint">
+          Click to watch the video ↗
+        </span>
+
+      </section>
+
     </main>
+
+    <!-- FOOTER -->
 
     <footer class="footer">
       <span class="mono">Parag Patil · Work</span>
@@ -357,6 +551,8 @@
     </footer>
 
   </div>
+
+  <!-- INSTAGRAM CAROUSEL SCRIPT -->
 
   <script>
     (() => {
@@ -386,7 +582,9 @@
         current = (index + slides.length) % slides.length;
         image.src = slides[current];
         image.alt = `Bluestone Instagram carousel slide ${current + 1} of ${slides.length}`;
-        counter.textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+
+        counter.textContent =
+          `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
 
         dots.forEach((dot, i) => {
           dot.classList.toggle('is-active', i === current);
@@ -414,5 +612,6 @@
       });
     })();
   </script>
+
 </body>
 </html>
