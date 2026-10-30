@@ -261,20 +261,27 @@
       }
     }
 
-    /* CAMPAIGNS & COPY — image-led editorial gallery */
+    /* CAMPAIGNS & COPY — one project per screen row */
     .work-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 46px 22px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 64px;
       align-items: start;
     }
 
     .work-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+      align-items: center;
+      gap: clamp(24px, 5vw, 64px);
       min-width: 0;
+      padding-bottom: 48px;
+      border-bottom: 1px solid #292929;
     }
 
     .work-card .work-image {
-      aspect-ratio: 4 / 5;
-      margin-bottom: 17px;
+      aspect-ratio: 4 / 3;
+      margin: 0;
       border: 1px solid #292929;
       border-radius: 2px;
       background: #0b0b0b;
@@ -287,9 +294,13 @@
       padding: 0;
     }
 
+    .work-card .card-top {
+      align-self: center;
+    }
+
     .work-card .card-top h3 {
-      font-size: clamp(19px, 1.7vw, 23px);
-      margin-bottom: 6px;
+      font-size: clamp(25px, 3vw, 42px);
+      margin-bottom: 10px;
     }
 
     .work-card .card-top p {
@@ -300,18 +311,18 @@
     }
 
     .work-card .spec {
-      margin-top: 12px;
+      margin-top: 22px;
       padding: 0;
       background: transparent;
       border: 0;
       border-radius: 0;
       color: #bdbdbd;
-      font-size: 13px;
-      line-height: 1.65;
+      font-size: 14px;
+      line-height: 1.7;
     }
 
     .work-card .brief-label {
-      margin-bottom: 5px;
+      margin-bottom: 7px;
       color: #888;
       font-size: 9px;
       letter-spacing: 0.14em;
@@ -319,30 +330,31 @@
 
     .work-card .spec p {
       color: #bdbdbd;
-      font-size: 13px;
-      line-height: 1.65;
+      font-size: 14px;
+      line-height: 1.7;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 720px) {
       .work-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 38px 20px;
+        gap: 38px;
       }
-    }
 
-    @media (max-width: 600px) {
-      .work-grid {
-        grid-template-columns: 1fr;
-        gap: 34px;
+      .work-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        padding-bottom: 32px;
       }
 
       .work-card .work-image {
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 4 / 3;
+      }
+
+      .work-card .card-top h3 {
+        font-size: 25px;
       }
 
       .work-card .spec {
-        padding: 0;
-        margin-top: 10px;
+        margin-top: 12px;
       }
     }
 
