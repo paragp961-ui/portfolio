@@ -24,7 +24,7 @@
 .campaign-copy p{font-size:14px;line-height:1.75;color:#d0d0d0;margin:0}
 .metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:20px}
 .metric{padding:13px 12px;border:1px solid #303030;background:#0b0b0b}.metric strong{display:block;font-size:clamp(20px,2.6vw,30px);letter-spacing:-.05em;color:#fff}.metric span{display:block;margin-top:4px;color:#999;font:9px 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;line-height:1.5}
-.source-link{display:inline-block;margin-top:18px;color:#fff;text-decoration:underline;text-underline-offset:4px;font-size:12px}
+.campaign-details{margin-top:18px;border-top:1px solid #333;padding-top:12px}.campaign-details summary{cursor:pointer;list-style:none;color:#fff;font:11px 'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;justify-content:space-between;padding:5px 0}.campaign-details summary::-webkit-details-marker{display:none}.campaign-details summary:after{content:'+';font:22px Arial;color:#d9ff45}.campaign-details[open] summary:after{content:'−'}.campaign-details[open] summary{margin-bottom:14px}.campaign-details .metrics{margin-top:18px}
 .method-note{padding:22px 24px;border:1px solid #333;background:#0b0b0b;margin:46px 0 0;color:#bbb;font-size:13px;line-height:1.8}
 .method-note strong{color:#fff}
 @media(max-width:760px){.campaign{grid-template-columns:1fr!important;gap:20px;padding:24px 0 32px}.campaign:nth-child(even) .campaign-art{order:0}.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.metric{padding:11px 8px}.campaign-copy h2{font-size:36px}}
@@ -39,56 +39,41 @@
 <section class="campaign-list" aria-label="Advertising campaign case studies">
 <article class="campaign">
 <div class="campaign-art"><img src="images/campaign-nike.svg" alt="Original editorial illustration of a runner in motion, created to accompany the Nike Da Da Ding case study"></div>
-<div class="campaign-copy"><div class="campaign-meta"><span class="campaign-number">01 / NIKE</span><span class="campaign-type">Worked on · Campaign monitoring</span></div><h2>Da Da Ding</h2><p class="campaign-subtitle">Turning women’s sport into a cultural movement · India · 2016</p>
-<h3>The challenge</h3><p>Encourage young women in India to participate in sport, at a time when social expectations could discourage them from playing.</p>
+<div class="campaign-copy"><div class="campaign-meta"><span class="campaign-number">01 / NIKE</span><span class="campaign-type">Worked on · Campaign monitoring</span></div><h2>Da Da Ding</h2><p class="campaign-subtitle">Turning women’s sport into a cultural movement · India · 2016</p><details class="campaign-details"><summary>Explore campaign breakdown</summary><h3>The challenge</h3><p>Encourage young women in India to participate in sport, at a time when social expectations could discourage them from playing.</p>
 <h3>The idea &amp; execution</h3><p>Nike used a high-energy music video featuring Indian women athletes and cultural figures. The film was amplified through digital video, social, mobile, radio and music discovery platforms — making the message feel like a movement, not a conventional product ad.</p>
 <h3>My lens</h3><p>Campaign monitoring and advertising intelligence: identifying brand creatives, tracking placements and understanding how a campaign idea travels across media. This is not a claim of creative production.</p>
-<div class="metrics"><div class="metric"><strong>54M</strong><span>Video reach</span></div><div class="metric"><strong>2M</strong><span>Audio streams</span></div><div class="metric"><strong>118K</strong><span>Nike+ active users</span></div></div>
-<a class="source-link" href="https://www.warc.com/en/article/nike%3A-inspiring-the-athlete-within-every-woman-23d340842c1542838ca5fd9fa6e217c4" target="_blank" rel="noopener">Campaign case study ↗</a>
-</div></article>
+<div class="metrics"><div class="metric"><strong>54M</strong><span>Video reach</span></div><div class="metric"><strong>2M</strong><span>Audio streams</span></div><div class="metric"><strong>118K</strong><span>Nike+ active users</span></div></div></details></div></article>
 <article class="campaign">
 <div class="campaign-art"><img src="images/campaign-jiosaavn.svg" alt="Original editorial illustration of wireless earbuds and sound waves for the OnePlus and JioSaavn case study"></div>
-<div class="campaign-copy"><div class="campaign-meta"><span class="campaign-number">02 / ONEPLUS × JIOSAAVN</span><span class="campaign-type">Worked on · Campaign monitoring</span></div><h2>Hear the Difference</h2><p class="campaign-subtitle">OnePlus Buds Z2 · Audio-first digital activation · 2023</p>
-<h3>The challenge</h3><p>Showcase noise cancellation in a way people could understand immediately, rather than simply listing a technical feature.</p>
+<div class="campaign-copy"><div class="campaign-meta"><span class="campaign-number">02 / ONEPLUS × JIOSAAVN</span><span class="campaign-type">Worked on · Campaign monitoring</span></div><h2>Hear the Difference</h2><p class="campaign-subtitle">OnePlus Buds Z2 · Audio-first digital activation · 2023</p><details class="campaign-details"><summary>Explore campaign breakdown</summary><h3>The challenge</h3><p>Showcase noise cancellation in a way people could understand immediately, rather than simply listing a technical feature.</p>
 <h3>The idea &amp; execution</h3><p>An ASMR-style in-app audio ad on JioSaavn used the contrast between traffic noise and quiet to demonstrate the product benefit. The media idea made the listening environment part of the demonstration.</p>
 <h3>My lens</h3><p>Campaign monitoring and creative/ad intelligence — looking at how the brand message, format and platform worked together. The reported results below belong to the campaign overall.</p>
-<div class="metrics"><div class="metric"><strong>22M</strong><span>Impressions</span></div><div class="metric"><strong>2.4%</strong><span>Male CTR</span></div><div class="metric"><strong>2.0%</strong><span>Female CTR</span></div></div>
-<a class="source-link" href="https://www.warc.com/en/article/oneplus%3A-jiosaavn-x-oneplus-earbuds-z2-2b10500c93de4e78980296a75b0e8e05" target="_blank" rel="noopener">Campaign case study ↗</a>
-</div></article>
+<div class="metrics"><div class="metric"><strong>22M</strong><span>Impressions</span></div><div class="metric"><strong>2.4%</strong><span>Male CTR</span></div><div class="metric"><strong>2.0%</strong><span>Female CTR</span></div></div></details></div></article>
 <article class="campaign">
 <div class="campaign-art"><img src="images/campaign-dmart.svg" alt="Original editorial illustration of a value-focused retail shopping basket for the DMart student sale case study"></div>
-<div class="campaign-copy"><div class="campaign-meta"><span class="campaign-number">03 / DMART</span><span class="campaign-type">Worked on · Campaign monitoring</span></div><h2>From Scroll to Store</h2><p class="campaign-subtitle">Student sale · Local retail activation · Pune</p>
-<h3>The challenge</h3><p>Make a physical retail sale relevant to students online, then move that attention towards a landing page and store discovery.</p>
+<div class="campaign-copy"><div class="campaign-meta"><span class="campaign-number">03 / DMART</span><span class="campaign-type">Worked on · Campaign monitoring</span></div><h2>From Scroll to Store</h2><p class="campaign-subtitle">Student sale · Local retail activation · Pune</p><details class="campaign-details"><summary>Explore campaign breakdown</summary><h3>The challenge</h3><p>Make a physical retail sale relevant to students online, then move that attention towards a landing page and store discovery.</p>
 <h3>The idea &amp; execution</h3><p>The case study describes mobile-first static ads and carousel GIFs, student-focused messaging, local targeting and a landing-page journey designed to connect digital interest with store intent.</p>
 <h3>My lens</h3><p>Advertising intelligence and campaign monitoring: observing creative formats, messaging and distribution. The figures are published results from the agency case study, not numbers attributed to my individual work.</p>
-<div class="metrics"><div class="metric"><strong>13.43L</strong><span>People reached</span></div><div class="metric"><strong>53K</strong><span>Landing-page clicks</span></div><div class="metric"><strong>55K</strong><span>Post engagements</span></div></div>
-<a class="source-link" href="https://www.theimpulsedigital.com/case-studies/dmart/" target="_blank" rel="noopener">Agency case study ↗</a>
-</div></article>
+<div class="metrics"><div class="metric"><strong>13.43L</strong><span>People reached</span></div><div class="metric"><strong>53K</strong><span>Landing-page clicks</span></div><div class="metric"><strong>55K</strong><span>Post engagements</span></div></div></details></div></article>
 <article class="campaign">
 <div class="campaign-art minimalist-creatives">
 <img src="images/campaign-minimalist-01.svg" alt="Minimalist concept creative: ingredient-first Niacinamide 10% serum poster">
 <img src="images/campaign-minimalist-02.svg" alt="Minimalist concept creative: simple skincare routine poster">
 <img src="images/campaign-minimalist-03.svg" alt="Minimalist concept creative: oil-balance and skin texture poster">
 </div>
-<div class="campaign-copy"><div class="campaign-meta"><span class="campaign-number">04 / MINIMALIST</span><span class="campaign-type">Analysed · Creative concept</span></div><h2>Less, but better.</h2><p class="campaign-subtitle">Niacinamide 10% Face Serum · Ingredient-led skincare · India</p>
-<h3>The challenge</h3><p>Skincare shoppers face crowded shelves and complicated claims. The opportunity is to make the product's purpose and key ingredients easy to understand at a glance.</p>
+<div class="campaign-copy"><div class="campaign-meta"><span class="campaign-number">04 / MINIMALIST</span><span class="campaign-type">Analysed · Creative concept</span></div><h2>Less, but better.</h2><p class="campaign-subtitle">Niacinamide 10% Face Serum · Ingredient-led skincare · India</p><details class="campaign-details"><summary>Explore campaign breakdown</summary><h3>The challenge</h3><p>Skincare shoppers face crowded shelves and complicated claims. The opportunity is to make the product's purpose and key ingredients easy to understand at a glance.</p>
 <h3>The idea &amp; creative direction</h3><p>A three-part social campaign built around clarity: (1) lead with the active ingredient and its role, (2) show the serum as one simple step in a routine, and (3) explain the formula's oil-balancing positioning. Clean layouts, restrained colour and close-up product imagery keep attention on the formula rather than exaggerated promises.</p>
 <h3>Creative 01 — Ingredient first</h3><p>“10% Niacinamide. No unnecessary noise.” A product-led visual that makes the active and its role the hero.</p>
 <h3>Creative 02 — Keep the routine simple</h3><p>“Two to three drops. One easy step.” A routine-focused execution that makes usage feel straightforward.</p>
 <h3>Creative 03 — Know what goes on your skin</h3><p>“Niacinamide + Zinc + Matmarine.” An ingredient breakdown that turns the formula into an easy-to-scan story.</p>
-<h3>What I took from it</h3><p>The concept translates product information into three distinct content angles: awareness, usage and ingredient education. These are portfolio concepts, not official Minimalist advertisements, and no campaign performance is claimed.</p>
-<a class="source-link" href="https://beminimalist.co/products/niacinamide-10-with-matmarine" target="_blank" rel="noopener">Official product details ↗</a>
-</div></article>
+<h3>What I took from it</h3><p>The concept translates product information into three distinct content angles: awareness, usage and ingredient education. These are portfolio concepts, not official Minimalist advertisements, and no campaign performance is claimed.</p></details></div></article>
 <article class="campaign">
 <div class="campaign-art"><img src="images/campaign-soic.svg" alt="Original editorial illustration of an investor studying a stock chart on a screen for the SOIC analysis"></div>
-<div class="campaign-copy"><div class="campaign-meta"><span class="campaign-number">05 / SOIC</span><span class="campaign-type">Analysed · Content-led growth</span></div><h2>Making Markets Make Sense</h2><p class="campaign-subtitle">SOIC — School of Intrinsic Compounding · Financial education</p>
-<h3>The challenge</h3><p>Make investing and business analysis easier to approach without reducing complex ideas to shallow tips or hype.</p>
+<div class="campaign-copy"><div class="campaign-meta"><span class="campaign-number">05 / SOIC</span><span class="campaign-type">Analysed · Content-led growth</span></div><h2>Making Markets Make Sense</h2><p class="campaign-subtitle">SOIC — School of Intrinsic Compounding · Financial education</p><details class="campaign-details"><summary>Explore campaign breakdown</summary><h3>The challenge</h3><p>Make investing and business analysis easier to approach without reducing complex ideas to shallow tips or hype.</p>
 <h3>The content approach</h3><p>SOIC builds its proposition around educational videos, webinars, research, industry deep-dives and investing case studies. Its content turns company results and market themes into structured learning for an investor audience.</p>
 <h3>What I took from it</h3><p>A strong content brand earns attention by being useful and consistent. The editorial opportunity is to package complex research into clear hooks, accessible explanations and repeatable formats — while keeping financial claims responsible.</p>
 <div class="metrics"><div class="metric"><strong>523K</strong><span>YouTube subscribers*</span></div><div class="metric"><strong>43.2M</strong><span>Channel views*</span></div><div class="metric"><strong>580</strong><span>Videos published*</span></div></div>
-<p style="font-size:11px;color:#888;margin-top:9px">*Third-party channel snapshot, checked 2 November 2026; not campaign-attributed results.</p>
-<a class="source-link" href="https://www.soic.in/" target="_blank" rel="noopener">SOIC official website ↗</a>
-</div></article>
+<p style="font-size:11px;color:#888;margin-top:9px">*Third-party channel snapshot, checked 2 November 2026; not campaign-attributed results.</p></details></div></article>
 </section>
 <div class="method-note"><strong>A note on attribution</strong><br>“Worked on” refers to advertising-intelligence / campaign-monitoring exposure, not authorship of the original brand campaign. Public case-study metrics are attributed to the brands or agencies that reported them. “Analysed” marks independent case-study analysis. Supporting artwork on this page is original editorial illustration, not official campaign photography or brand creative.</div>
 </main>
