@@ -43,6 +43,31 @@
 .certification-card h3{font-size:19px;margin:16px 0 6px;color:#fff}
 .certification-card p{font-size:13px;line-height:1.6;color:#aaa;margin:0}
 @media(max-width:650px){.certification-grid{grid-template-columns:1fr}.certification-preview{height:200px}}
+
+/* GOOGLE ANALYTICS DEMO PROJECT */
+.analytics-project{margin:82px 0 76px;padding:42px 0 0;border-top:1px solid #444}
+.analytics-heading{max-width:850px;margin-bottom:36px}
+.analytics-heading h2{font-size:clamp(42px,7vw,76px);line-height:.98;letter-spacing:-.055em;margin:14px 0 20px}
+.analytics-lead{max-width:760px;color:#ccc;font-size:15px;line-height:1.8}
+.analytics-disclaimer{display:inline-block;margin:12px 0 0;padding:7px 10px;border:1px solid #555;color:#aaa;font:10px 'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase}
+.analytics-story{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin:38px 0;padding:24px 0;border-top:1px solid #303030;border-bottom:1px solid #303030}
+.analytics-kicker{font:10px 'DM Mono',monospace;letter-spacing:.13em;color:#d9ff45}
+.analytics-story h3{font-size:23px;line-height:1.2;margin:12px 0}
+.analytics-story p{font-size:13px;line-height:1.8;color:#aaa;margin:0}
+.analytics-dashboard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.analytics-panel{position:relative;min-height:260px;padding:24px 20px;border:1px solid #303030;background:#0b0b0b;overflow:hidden}
+.analytics-index{display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;border:1px solid #d9ff45;border-radius:50%;font:11px 'DM Mono',monospace;color:#d9ff45}
+.analytics-panel h3{font-size:24px;letter-spacing:-.04em;margin:18px 0 7px}
+.analytics-panel>p{font-size:12px;line-height:1.6;color:#999;min-height:38px;margin:0 0 20px}
+.funnel-bars{display:grid;gap:12px}.funnel-bars div{display:grid;grid-template-columns:1fr auto;gap:5px;font:10px 'DM Mono',monospace;color:#aaa}.funnel-bars i{grid-column:1/2;display:block;height:9px;background:#d9ff45;max-width:100%}.funnel-bars b{grid-column:2;grid-row:2;color:#fff;font-weight:400}
+.macro-stats{display:flex;gap:14px;flex-wrap:wrap}.macro-stats div{display:flex;flex-direction:column;gap:3px}.macro-stats b{font-size:22px;color:#fff}.macro-stats span{font:9px 'DM Mono',monospace;color:#888;text-transform:uppercase}
+.trend-line{height:48px;margin-top:18px;display:flex;align-items:end;gap:5px;border-bottom:1px solid #444}.trend-line span{flex:1;background:#d9ff45;opacity:.8}.trend-line span:nth-child(1){height:90%}.trend-line span:nth-child(2){height:82%}.trend-line span:nth-child(3){height:75%}.trend-line span:nth-child(4){height:68%}.trend-line span:nth-child(5){height:58%}.trend-line span:nth-child(6){height:51%}.trend-line span:nth-child(7){height:44%}.trend-line span:nth-child(8){height:36%}
+.channel-list,.campaign-rows,.page-rows{display:grid;gap:0}.channel-list div,.campaign-rows div,.page-rows div{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid #292929;font-size:10px;color:#bbb}.channel-list b,.campaign-rows b,.page-rows b{font:9px 'DM Mono',monospace;color:#d9ff45;text-align:right}
+.analytics-actions ul{padding-left:17px;margin:18px 0 0;color:#bbb;font-size:12px;line-height:1.8}.analytics-actions li{padding:0 0 10px 3px}
+.analytics-takeaway{margin:28px 0 0;padding:22px 24px;border:1px solid #333;background:#101010}.analytics-takeaway p{font-size:17px;line-height:1.65;color:#eee;max-width:850px;margin:12px 0 0}
+.analytics-footnote{font-size:10px;line-height:1.7;color:#777;margin:14px 0 0}
+@media(max-width:760px){.analytics-dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.analytics-story{grid-template-columns:1fr;gap:22px}}
+@media(max-width:520px){.analytics-dashboard-grid{grid-template-columns:1fr}.analytics-panel{min-height:230px}.analytics-project{margin-top:60px;padding-top:30px}}
 \n</style>
 </head>
 <body><div class="wrap">
@@ -90,7 +115,49 @@
 <h3>What I took from it</h3><p>A strong content brand earns attention by being useful and consistent. The editorial opportunity is to package complex research into clear hooks, accessible explanations and repeatable formats — while keeping financial claims responsible.</p>
 <div class="metrics"><div class="metric"><strong>523K</strong><span>YouTube subscribers*</span></div><div class="metric"><strong>43.2M</strong><span>Channel views*</span></div><div class="metric"><strong>580</strong><span>Videos published*</span></div></div>
 <p style="font-size:11px;color:#888;margin-top:9px">*Third-party channel snapshot, checked 2 November 2026; not campaign-attributed results.</p></details></div></article>
-</section>\n
+</section>
+
+<section class="analytics-project" aria-labelledby="analytics-project-title">
+  <div class="analytics-heading">
+    <p class="eyebrow">Measurement / user behaviour / optimisation</p>
+    <h2 id="analytics-project-title">Google Analytics<br>Demo Project.</h2>
+    <p class="analytics-lead">A practice case study using a Google Merchandise Store demo dataset. I explored where visitors dropped off, how acquisition channels performed and what the journey revealed about purchase intent.</p>
+    <p class="analytics-disclaimer">Independent learning project · Demo data · Not client work</p>
+  </div>
+  <div class="analytics-story">
+    <div><span class="analytics-kicker">01 / THE CHALLENGE</span><h3>Traffic was coming in. Too many visitors were leaving.</h3><p>The exercise focused on understanding the gap between attracting visitors and moving them towards a purchase — especially the product-page and checkout journey.</p></div>
+    <div><span class="analytics-kicker">02 / WHAT I EXPLORED</span><h3>Finding the points where intent dropped.</h3><p>Using GA4 explorations, I reviewed the purchase funnel, acquisition channels, campaign activity and page-level engagement to identify where the journey needed attention.</p></div>
+  </div>
+  <div class="analytics-dashboard-grid">
+    <article class="analytics-panel">
+      <span class="analytics-index">01</span><h3>Funnel leak</h3><p>Visitors lost at each step of the purchase journey.</p>
+      <div class="funnel-bars"><div><span>Product view</span><i style="width:100%"></i><b>100%</b></div><div><span>Add to cart</span><i style="width:25%"></i><b>24.9%</b></div><div><span>Checkout</span><i style="width:19%"></i><b>19.2%</b></div></div>
+    </article>
+    <article class="analytics-panel">
+      <span class="analytics-index">02</span><h3>Macro view</h3><p>Traffic and engagement trends across the reporting period.</p>
+      <div class="macro-stats"><div><b>81K</b><span>Visitors</span></div><div><b>75.1%</b><span>Bounce rate</span></div><div><b>19.4%</b><span>Engagement rate*</span></div></div>
+      <div class="trend-line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </article>
+    <article class="analytics-panel">
+      <span class="analytics-index">03</span><h3>Acquisition hub</h3><p>Comparing the channels bringing visitors to the store.</p>
+      <div class="channel-list"><div><span>Direct</span><b>Top traffic source</b></div><div><span>Organic Search</span><b>High-intent visits</b></div><div><span>Paid Search</span><b>Campaign traffic</b></div><div><span>Referral</span><b>Partner visits</b></div><div><span>Organic Social</span><b>Discovery</b></div></div>
+    </article>
+    <article class="analytics-panel">
+      <span class="analytics-index">04</span><h3>Campaign tracking</h3><p>Reviewing campaign-tagged sessions and activity.</p>
+      <div class="campaign-rows"><div><span>Holiday campaign</span><b>Active</b></div><div><span>August promotion</span><b>Active</b></div><div><span>Shopping free listings</span><b>Review</b></div><div><span>Brand search</span><b>Active</b></div></div>
+    </article>
+    <article class="analytics-panel">
+      <span class="analytics-index">05</span><h3>Page-level intent</h3><p>Looking at engagement across key product and landing pages.</p>
+      <div class="page-rows"><div><span>Homepage</span><b>High</b></div><div><span>Product pages</span><b>Mixed</b></div><div><span>Category pages</span><b>Medium</b></div><div><span>Cart</span><b>Drop-off</b></div></div>
+    </article>
+    <article class="analytics-panel analytics-actions">
+      <span class="analytics-index">06</span><h3>Turning analysis into action</h3><ul><li>Make shipping costs and product value clearer before checkout.</li><li>Test cart-recovery messaging for visitors who leave mid-journey.</li><li>Review channel quality, not just traffic volume, before shifting budget.</li></ul>
+    </article>
+  </div>
+  <div class="analytics-takeaway"><span class="analytics-kicker">03 / THE TAKEAWAY</span><p>Good campaign analysis is not just about how many people arrived. It is about understanding what they did next, where they lost interest and what can be improved.</p></div>
+  <p class="analytics-footnote">*Figures and dashboard elements are presented as an illustrative portfolio exercise based on the supplied demo-project reference. Channel labels and visual summaries are for demonstration, not verified live reporting.</p>
+</section>
+
 <section class="certifications-section" aria-labelledby="certifications-heading">
   <h2 id="certifications-heading">Certifications</h2>
   <p class="certifications-intro">A selection of courses and certifications that reflect my ongoing learning across digital advertising, social media, e-commerce and related skills.</p>
