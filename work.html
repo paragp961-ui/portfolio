@@ -371,6 +371,195 @@
       }
     }
 
+
+    /* =====================================================
+       SOCIAL MEDIA & DIGITAL MARKETING — PORTFOLIO PROJECT
+       ===================================================== */
+    .social-media-section {
+      margin: 76px 0 84px;
+      padding-top: 34px;
+      border-top: 1px solid #303030;
+      color: #fff;
+    }
+    .social-media-section .sm-intro {
+      max-width: 780px;
+      margin: 12px 0 34px;
+      color: #aaa;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .sm-project {
+      margin: 42px 0 0;
+      padding: 30px;
+      border: 1px solid #303030;
+      background: #101010;
+    }
+    .sm-project-kicker {
+      color: #c36a50;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .sm-project h3 {
+      margin: 9px 0 10px;
+      color: #fff;
+      font-size: clamp(25px, 3vw, 38px);
+      line-height: 1.2;
+    }
+    .sm-project > p {
+      max-width: 850px;
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .sm-note {
+      margin: 18px 0;
+      padding: 12px 15px;
+      border-left: 3px solid #b94e35;
+      background: #1a1716;
+      color: #c8c0bc;
+      font-size: 12px;
+      line-height: 1.65;
+    }
+    .sm-subhead {
+      margin: 28px 0 14px;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+    }
+    .sm-calendar {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .sm-day {
+      min-height: 116px;
+      padding: 12px;
+      border: 1px solid #303030;
+      background: #171717;
+    }
+    .sm-day b {
+      display: block;
+      margin-bottom: 9px;
+      color: #c36a50;
+      font-size: 11px;
+      letter-spacing: .08em;
+    }
+    .sm-day strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #f2f2f2;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .sm-day span {
+      display: block;
+      color: #999;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+    .sm-dashboard {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .sm-kpi {
+      padding: 18px;
+      border: 1px solid #303030;
+      background: #171717;
+    }
+    .sm-kpi span {
+      display: block;
+      color: #999;
+      font-size: 10px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .sm-kpi strong {
+      display: block;
+      margin-top: 8px;
+      color: #fff;
+      font-size: clamp(22px, 3vw, 30px);
+    }
+    .sm-table-wrap { overflow-x: auto; }
+    .sm-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #ddd;
+      font-size: 13px;
+      text-align: left;
+    }
+    .sm-table th, .sm-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #303030;
+      white-space: nowrap;
+    }
+    .sm-table th {
+      color: #c36a50;
+      font-size: 10px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .sm-community-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .sm-response {
+      padding: 18px;
+      border: 1px solid #303030;
+      background: #171717;
+    }
+    .sm-response .sm-channel {
+      color: #c36a50;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .sm-response h4 {
+      margin: 8px 0;
+      color: #fff;
+      font-size: 15px;
+    }
+    .sm-response p {
+      margin: 7px 0 0;
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .sm-response p strong { color: #eee; }
+    .sm-process {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .sm-process div {
+      padding: 15px;
+      border-top: 2px solid #b94e35;
+      background: #171717;
+      color: #aaa;
+      font-size: 12px;
+      line-height: 1.65;
+    }
+    .sm-process strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+      font-size: 13px;
+    }
+    @media (max-width: 760px) {
+      .sm-calendar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sm-dashboard { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sm-community-grid, .sm-process { grid-template-columns: 1fr; }
+      .sm-project { padding: 20px 15px; }
+    }
+
   </style>
 </head>
 
@@ -385,6 +574,7 @@
       <nav aria-label="Main navigation">
         <a href="index.html">Me</a>
         <a class="active" href="work.html">Copywriting</a>
+        <a href="#social-media">Social Media</a>
         <a href="advertising-campaigns.html">Advertising Campaigns</a>
         <a href="poet-on-edge.html">Poet on Edge</a>
         <a href="contact.html">Contact</a>
@@ -614,6 +804,128 @@
           </div>
         </article>
 
+      </section>
+
+
+      <!-- SECTION 4 — SOCIAL MEDIA & DIGITAL MARKETING -->
+      <section class="social-media-section" id="social-media" aria-labelledby="social-media-heading">
+        <div class="section-head">
+          <p class="eyebrow">Strategy · Reporting · Community</p>
+          <h2 id="social-media-heading" style="font-size:clamp(38px,7vw,72px);margin:0">Social Media &amp; Digital Marketing</h2>
+        </div>
+        <p class="sm-intro">A practical look at how I would plan content, review performance and build conversations around a brand — not just create posts and publish them.</p>
+
+        <article class="sm-project">
+          <span class="sm-project-kicker">01 / Content planning</span>
+          <h3>Spotify — 30-day social media plan</h3>
+          <p>An independent planning exercise for Spotify India, built around music discovery, everyday listening habits and audience participation. The mix balances entertaining posts with useful recommendations and community-led prompts.</p>
+          <div class="sm-note"><strong>Portfolio exercise:</strong> This is a proposed content calendar, not an official Spotify plan or a commissioned campaign. Publishing frequency, formats and topics are recommendations for the exercise.</div>
+          <h4 class="sm-subhead">The monthly content mix</h4>
+          <div class="sm-process">
+            <div><strong>Discover</strong>New music, artist spotlights and playlist recommendations to encourage exploration.</div>
+            <div><strong>Participate</strong>Polls, questions, playlist prompts and relatable music moments that invite replies.</div>
+            <div><strong>Share</strong>Community picks, listening moods and short-form content designed to be shared.</div>
+          </div>
+          <h4 class="sm-subhead">30-day content calendar</h4>
+          <div class="sm-calendar">
+            <div class="sm-day"><b>DAY 01</b><strong>Monday mood check</strong><span>Story poll · Engagement</span></div>
+            <div class="sm-day"><b>DAY 02</b><strong>Playlist of the week</strong><span>Carousel · Discovery</span></div>
+            <div class="sm-day"><b>DAY 03</b><strong>Guess the song</strong><span>Story quiz · Interaction</span></div>
+            <div class="sm-day"><b>DAY 04</b><strong>Artist spotlight</strong><span>Reel · Discovery</span></div>
+            <div class="sm-day"><b>DAY 05</b><strong>Weekend loading</strong><span>Meme post · Shareability</span></div>
+            <div class="sm-day"><b>DAY 06</b><strong>Your weekend anthem?</strong><span>Story question · UGC prompt</span></div>
+            <div class="sm-day"><b>DAY 07</b><strong>Community playlist picks</strong><span>Stories · Community</span></div>
+            <div class="sm-day"><b>DAY 08</b><strong>Monday Survival Kit</strong><span>Static creative · Relatability</span></div>
+            <div class="sm-day"><b>DAY 09</b><strong>New music radar</strong><span>Carousel · Discovery</span></div>
+            <div class="sm-day"><b>DAY 10</b><strong>Finish the lyric</strong><span>Story quiz · Interaction</span></div>
+            <div class="sm-day"><b>DAY 11</b><strong>Behind the playlist</strong><span>Reel · Editorial</span></div>
+            <div class="sm-day"><b>DAY 12</b><strong>Music taste, explained</strong><span>Meme post · Shareability</span></div>
+            <div class="sm-day"><b>DAY 13</b><strong>Pick your vibe</strong><span>Story poll · Engagement</span></div>
+            <div class="sm-day"><b>DAY 14</b><strong>Listener recommendations</strong><span>Community feature · UGC</span></div>
+            <div class="sm-day"><b>DAY 15</b><strong>Mid-month music check</strong><span>Story question · Feedback</span></div>
+            <div class="sm-day"><b>DAY 16</b><strong>Underrated tracks</strong><span>Carousel · Discovery</span></div>
+            <div class="sm-day"><b>DAY 17</b><strong>One song, one memory</strong><span>Story prompt · Conversation</span></div>
+            <div class="sm-day"><b>DAY 18</b><strong>Artist then and now</strong><span>Reel · Entertainment</span></div>
+            <div class="sm-day"><b>DAY 19</b><strong>Friday soundtrack</strong><span>Static creative · Sharing</span></div>
+            <div class="sm-day"><b>DAY 20</b><strong>Build a playlist with us</strong><span>Story replies · Participation</span></div>
+            <div class="sm-day"><b>DAY 21</b><strong>Community song picks</strong><span>Stories · Community</span></div>
+            <div class="sm-day"><b>DAY 22</b><strong>Workday background music</strong><span>Carousel · Utility</span></div>
+            <div class="sm-day"><b>DAY 23</b><strong>New release reaction</strong><span>Reel · Timely content</span></div>
+            <div class="sm-day"><b>DAY 24</b><strong>What's your repeat song?</strong><span>Story question · UGC prompt</span></div>
+            <div class="sm-day"><b>DAY 25</b><strong>Music hot take</strong><span>Text post · Discussion</span></div>
+            <div class="sm-day"><b>DAY 26</b><strong>Regional sounds spotlight</strong><span>Carousel · Discovery</span></div>
+            <div class="sm-day"><b>DAY 27</b><strong>Choose the next mood</strong><span>Story poll · Feedback</span></div>
+            <div class="sm-day"><b>DAY 28</b><strong>Listener playlist feature</strong><span>Community feature · UGC</span></div>
+            <div class="sm-day"><b>DAY 29</b><strong>Month in music</strong><span>Carousel · Recap</span></div>
+            <div class="sm-day"><b>DAY 30</b><strong>What should we play next?</strong><span>Story question · Research</span></div>
+          </div>
+        </article>
+
+        <article class="sm-project">
+          <span class="sm-project-kicker">02 / Measurement &amp; optimisation</span>
+          <h3>Social media performance dashboard</h3>
+          <p>A sample reporting view showing the metrics I would track to understand whether content is reaching people, earning attention and encouraging meaningful actions.</p>
+          <div class="sm-note"><strong>Illustrative demo data only:</strong> The figures below are fictional examples to demonstrate dashboard structure and interpretation. They are not Spotify results, actual account analytics or campaign claims.</div>
+          <h4 class="sm-subhead">Example monthly snapshot</h4>
+          <div class="sm-dashboard">
+            <div class="sm-kpi"><span>Reach</span><strong>248K</strong></div>
+            <div class="sm-kpi"><span>Impressions</span><strong>412K</strong></div>
+            <div class="sm-kpi"><span>Engagement rate</span><strong>4.8%</strong></div>
+            <div class="sm-kpi"><span>Link clicks</span><strong>3,260</strong></div>
+          </div>
+          <div class="sm-table-wrap">
+            <table class="sm-table">
+              <thead><tr><th>Content format</th><th>Reach</th><th>Engagements</th><th>What I'd learn</th></tr></thead>
+              <tbody>
+                <tr><td>Reels</td><td>112,000</td><td>6,720</td><td>Discovery and video retention</td></tr>
+                <tr><td>Carousels</td><td>74,000</td><td>4,440</td><td>Saves, shares and swipe-through</td></tr>
+                <tr><td>Stories</td><td>42,000</td><td>2,100</td><td>Poll replies and completion</td></tr>
+                <tr><td>Static posts</td><td>20,000</td><td>740</td><td>Creative and message relevance</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4 class="sm-subhead">How I would use the report</h4>
+          <div class="sm-process">
+            <div><strong>Review</strong>Compare reach, engagement rate, saves, shares, clicks and performance by format.</div>
+            <div><strong>Understand</strong>Identify which topics and creative approaches earn attention, and where audiences drop off.</div>
+            <div><strong>Improve</strong>Test stronger hooks, adjust posting formats and carry audience feedback into the next calendar.</div>
+          </div>
+        </article>
+
+        <article class="sm-project">
+          <span class="sm-project-kicker">03 / Community &amp; conversation</span>
+          <h3>Community management in action</h3>
+          <p>Example responses showing how I would keep a brand's voice friendly, helpful and human across its own social channels and relevant off-site conversations.</p>
+          <div class="sm-note"><strong>Response simulations:</strong> These are sample situations and draft replies, not screenshots or claims of real customer interactions.</div>
+          <div class="sm-community-grid">
+            <div class="sm-response">
+              <span class="sm-channel">Instagram · Positive comment</span>
+              <h4>“This playlist is exactly what I needed!”</h4>
+              <p><strong>Reply:</strong> “Sounds like it found you at the right time. What track are you playing on repeat?”</p>
+            </div>
+            <div class="sm-response">
+              <span class="sm-channel">Instagram · Content feedback</span>
+              <h4>“You should feature more indie artists.”</h4>
+              <p><strong>Reply:</strong> “We're always up for discovering something new. Drop an indie artist you think deserves more listeners.”</p>
+            </div>
+            <div class="sm-response">
+              <span class="sm-channel">Public comment · Customer complaint</span>
+              <h4>“My app keeps crashing. This is frustrating.”</h4>
+              <p><strong>Reply:</strong> “Sorry you're running into this. Please send us a DM with your device type and app version so the support team can help troubleshoot. Please don't share account or payment details publicly.”</p>
+            </div>
+            <div class="sm-response">
+              <span class="sm-channel">External blog · Relevant discussion</span>
+              <h4>A music blogger asks how people discover regional music.</h4>
+              <p><strong>Response approach:</strong> Add a useful, relevant comment about listener recommendations and regional playlists, disclose the brand connection where applicable, and avoid dropping promotional links without context.</p>
+            </div>
+          </div>
+          <h4 class="sm-subhead">My community management approach</h4>
+          <div class="sm-process">
+            <div><strong>Listen first</strong>Monitor comments, mentions, relevant blogs and conversations; understand the context before replying.</div>
+            <div><strong>Respond thoughtfully</strong>Match the brand voice, answer clearly, acknowledge complaints and move sensitive account issues to private support.</div>
+            <div><strong>Learn and escalate</strong>Flag recurring issues, route unresolved complaints to the right team and use audience feedback to inform content.</div>
+          </div>
+        </article>
       </section>
 
       <!-- SECTION 3 — VIDEO EDITING -->
